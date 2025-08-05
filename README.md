@@ -28,3 +28,19 @@ Add this to your `pubspec.yaml`:
 dependencies:
   flutter_dom_ui: ^<latest_version>
 ```
+
+### 2️⃣ Import the package
+
+In your Dart/Flutter file, import the package:
+
+```dart
+import 'package:flutter_dom_ui/flutter_dom_ui.dart';
+```
+
+### 🌐 Example Website
+
+Check out the live demo and example usage at:
+
+```md
+https://flutterdomui.netlify.app/
+```
