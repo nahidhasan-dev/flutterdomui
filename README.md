@@ -5,17 +5,17 @@
 
 **flutter_dom_ui** is a Flutter UI utility package designed to improve **SEO-friendliness** and **accessibility** in Flutter web applications. It includes custom semantic widgets like:
 
-`SeoScaffold`, `SeoAppBar`, `SeoCenter`, `SeoContainer`, `SeoListView`, `SeoColumn`, `SeoRow`, `SeoText`, `SeoTextField`, `SeoButton`, `SeoImage`, `SeoLink` — all optimized for **DOM manipulation and web enhancements**.
+`SeoScaffold`, `SeoAppBar`, `SeoBottomNavigationBar`, `SeoCenter`, `SeoContainer`, `SeoFooter`, `SeoListView`,`SeoSingleChildScrollView`, `SeoColumn`, `SeoRow`, `SeoText`, `SeoTextField`, `SeoButton`, `SeoImage`, `SeoLink` — all optimized for **DOM manipulation and web enhancements**.
 
 ---
 
 ## ✨ Features
 
 - 📦 SEO-friendly widgets (`SeoText`, `SeoImage`, `SeoButton`, etc.)
-- ⚡ Custom wrappers for layout widgets: `ListView`, `Column`, `Row`, `Container`, `Center`
+- ⚡ Custom wrappers for layout widgets: `ListView`,`SingleChildScrollView`, `Column`, `Row`, `Container`, `Center`, `Footer`
 - 🔗 Semantic links using `<a>` tag behavior via `SeoLink`
 - 🔠 DOM-based text rendering with `SeoText` for better crawlability
-- 🧱 Scaffold and AppBar variants: `SeoScaffold`, `SeoAppBar`
+- 🧱 Scaffold, BottomNavigationBar and AppBar variants: `SeoScaffold`, `SeoAppBar`, `SeoBottomNavigationBar`
 - 🧪 Compatible with **Flutter Web** and supports **unit/widget testing**
 
 ---
@@ -58,6 +58,19 @@ SeoScaffold(
             style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
           ),
         ),
+        bottomNavigationBar: SeoBottomNavigationBar(
+            items: [
+              BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.settings),
+                label: 'Settings',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.person),
+                label: 'Profile',
+              ),
+            ],
+          ),
         body: SeoCenter(
           child: SeoContainer(
             width: 600,

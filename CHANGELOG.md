@@ -26,9 +26,9 @@
 
 ## 0.0.7
 
-- ADD: Added new HTML DOM **SeoBottomNavigationBar** which will show on html as <nav></nav>
+- ADD: Added new HTML DOM **SeoBottomNavigationBar** which will show on html as `<nav></nav>`
 - ADD: Added new HTML DOM **SeoBottomNavigationBar** on **SeoScaffold** & also added 'floatingActionButton', 'drawer', 'endDrawer'.
 
 ## 0.0.8
 
--ADD: Added new HTML DOM **SeoFooter** which will show on Flutter as Container & on html as <footer></footer>
+-ADD: Added new HTML DOM **SeoFooter** which will show on Flutter as Container & on html as `<footer></footer>`

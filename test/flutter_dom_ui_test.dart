@@ -27,6 +27,27 @@ void main() {
     expect(find.text('Inside container'), findsOneWidget);
   });
 
+  testWidgets('SeoFooter renders child', (WidgetTester tester) async {
+    await tester.pumpWidget(
+      const MaterialApp(home: SeoFooter(child: Text('Inside footer'))),
+    );
+    expect(find.text('Inside footer'), findsOneWidget);
+  });
+
+  testWidgets('SeoSingleChildScrollView scroll out children vertically', (
+    WidgetTester tester,
+  ) async {
+    await tester.pumpWidget(
+      const MaterialApp(
+        home: SeoSingleChildScrollView(
+          child: SeoColumn(children: [Text('One'), Text('Two')]),
+        ),
+      ),
+    );
+    expect(find.text('One'), findsOneWidget);
+    expect(find.text('Two'), findsOneWidget);
+  });
+
   testWidgets('SeoColumn lays out children vertically', (
     WidgetTester tester,
   ) async {
@@ -92,6 +113,33 @@ void main() {
     expect(find.text('SEO AppBar'), findsOneWidget);
   });
 
+  testWidgets('SeoBottomNavigationBar renders nav', (
+    WidgetTester tester,
+  ) async {
+    await tester.pumpWidget(
+      const MaterialApp(
+        home: Scaffold(
+          bottomNavigationBar: SeoBottomNavigationBar(
+            items: [
+              BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.settings),
+                label: 'Settings',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.person),
+                label: 'Profile',
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+    expect(find.text('Home'), findsOneWidget);
+    expect(find.text('Settings'), findsOneWidget);
+    expect(find.text('Profile'), findsOneWidget);
+  });
+
   testWidgets('SeoCenter centers child', (WidgetTester tester) async {
     await tester.pumpWidget(
       const MaterialApp(home: SeoCenter(child: Text('Centered'))),
@@ -108,11 +156,27 @@ void main() {
           metaTitle: 'Title',
           appBar: SeoAppBar(title: Text('Title')),
           body: Text('Body content'),
+          bottomNavigationBar: SeoBottomNavigationBar(
+            items: [
+              BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.settings),
+                label: 'Settings',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.person),
+                label: 'Profile',
+              ),
+            ],
+          ),
         ),
       ),
     );
     expect(find.text('Title'), findsOneWidget);
     expect(find.text('Body content'), findsOneWidget);
+    expect(find.text('Home'), findsOneWidget);
+    expect(find.text('Settings'), findsOneWidget);
+    expect(find.text('Profile'), findsOneWidget);
   });
 
   testWidgets('SeoInitializer can wrap child', (WidgetTester tester) async {
