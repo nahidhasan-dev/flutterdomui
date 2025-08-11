@@ -14,4 +14,8 @@
 ## 0.0.4
 
 - UPDATE: updated the description on pubspec.yaml file.
-- REMOVE: removed textScaleFactor from seo_text file because of it's depcrecated.
+- REMOVE: removed **textScaleFactor** from **seo_text** file because of it's depcrecated.
+
+## 0.0.5
+
+- UPDATE: updated the **SeoAppBar** widget. Addeed **flexibleSpace** on **SeoAppBar**

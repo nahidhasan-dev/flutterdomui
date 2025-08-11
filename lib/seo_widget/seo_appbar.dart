@@ -9,6 +9,7 @@ class SeoAppBar extends StatelessWidget
   final bool? automaticallyImplyLeading;
   final Widget? title;
   final List<Widget>? actions;
+  final Widget? flexibleSpace;
   final Color? shadowColor;
   final Color? surfaceTintColor;
   final ShapeBorder? shape;
@@ -27,6 +28,7 @@ class SeoAppBar extends StatelessWidget
     this.leading,
     this.title,
     this.actions,
+    this.flexibleSpace,
     this.shadowColor,
     this.surfaceTintColor,
     this.shape,
@@ -51,6 +53,7 @@ class SeoAppBar extends StatelessWidget
       leading: leading,
       title: title,
       actions: actions,
+      flexibleSpace: flexibleSpace,
       shadowColor: shadowColor,
       surfaceTintColor: surfaceTintColor,
       shape: shape,
