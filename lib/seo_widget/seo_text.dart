@@ -21,7 +21,6 @@ class SeoText extends StatelessWidget implements SeoInjectable {
   final Locale? locale;
   final bool? softWrap;
   final TextOverflow? overflow;
-  final double? textScaleFactor;
   final TextScaler? textScaler;
   final int? maxLines;
   final String? semanticsLabel;
@@ -41,7 +40,6 @@ class SeoText extends StatelessWidget implements SeoInjectable {
     this.locale,
     this.softWrap,
     this.overflow,
-    this.textScaleFactor,
     this.textScaler,
     this.maxLines,
     this.semanticsLabel,
@@ -61,7 +59,6 @@ class SeoText extends StatelessWidget implements SeoInjectable {
       locale: locale,
       softWrap: softWrap,
       overflow: overflow,
-      textScaleFactor: textScaleFactor,
       textScaler: textScaler,
       maxLines: maxLines,
       semanticsLabel: semanticsLabel,
