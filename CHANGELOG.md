@@ -19,3 +19,7 @@
 ## 0.0.5
 
 - UPDATE: updated the **SeoAppBar** widget. Addeed **flexibleSpace** on **SeoAppBar**
+
+## 0.0.6
+
+- ADD: Added new HTML DOM **SeoSingleChildScrollView**
