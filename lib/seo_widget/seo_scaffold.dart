@@ -9,7 +9,15 @@ class SeoScaffold extends StatelessWidget {
   final String metaTitle;
   final SeoInjectableLayout? appBar;
   final Widget body;
+  final SeoInjectableLayout? bottomNavigationBar;
   final Color? backgroundColor;
+  final Widget? floatingActionButton;
+  final FloatingActionButtonLocation? floatingActionButtonLocation;
+  final FloatingActionButtonAnimator? floatingActionButtonAnimator;
+  final Widget? drawer;
+  final void Function(bool)? onDrawerChanged;
+  final Widget? endDrawer;
+  final void Function(bool)? onEndDrawerChanged;
   final String? canonicalUrl;
   final String? metaDescription;
   final String? metaKeywords;
@@ -21,8 +29,16 @@ class SeoScaffold extends StatelessWidget {
     super.key,
     required this.metaTitle,
     this.appBar,
+    this.bottomNavigationBar,
     this.backgroundColor,
     required this.body,
+    this.floatingActionButton,
+    this.floatingActionButtonLocation,
+    this.floatingActionButtonAnimator,
+    this.drawer,
+    this.onDrawerChanged,
+    this.endDrawer,
+    this.onEndDrawerChanged,
     this.metaDescription,
     this.metaKeywords,
     this.canonicalUrl,
@@ -41,6 +57,15 @@ class SeoScaffold extends StatelessWidget {
       appBar:
           appBar is PreferredSizeWidget ? appBar as PreferredSizeWidget : null,
       body: body,
+      bottomNavigationBar:
+          bottomNavigationBar is Widget ? bottomNavigationBar as Widget : null,
+      floatingActionButton: floatingActionButton,
+      floatingActionButtonLocation: floatingActionButtonLocation,
+      floatingActionButtonAnimator: floatingActionButtonAnimator,
+      drawer: drawer,
+      onDrawerChanged: onDrawerChanged,
+      endDrawer: endDrawer,
+      onEndDrawerChanged: onEndDrawerChanged,
     );
   }
 

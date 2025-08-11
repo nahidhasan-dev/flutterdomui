@@ -12,3 +12,5 @@ export 'seo_widget/seo_image.dart';
 export 'seo_widget/seo_link.dart';
 export 'seo_widget/seo_text.dart';
 export 'seo_widget/seo_textfield.dart';
+export 'seo_widget/seo_singlechildscrollview.dart';
+export 'seo_widget/seo_bottomnavigationbar.dart';

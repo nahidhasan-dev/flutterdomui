@@ -23,3 +23,8 @@
 ## 0.0.6
 
 - ADD: Added new HTML DOM **SeoSingleChildScrollView**
+
+## 0.0.7
+
+- ADD: Added new HTML DOM **SeoBottomNavigationBar** which will show on html as <footer></footer>
+- ADD: Added new HTML DOM **SeoBottomNavigationBar** on **SeoScaffold** & also added 'floatingActionButton', 'drawer', 'endDrawer'.

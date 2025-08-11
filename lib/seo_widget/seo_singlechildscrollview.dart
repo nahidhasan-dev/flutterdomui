@@ -78,7 +78,7 @@ class SeoSingleChildScrollView extends StatelessWidget
         ..paddingRight = '${resolved.right}px';
     }
 
-    // Leading
+    // child
     if (child != null) {
       _appendWidgetToContainer(child!, divContainer);
     }

@@ -1,6 +1,6 @@
 name: flutter_dom_ui
 description: "A new universal Flutter Web Seo package. flutter_dom_ui is a Flutter UI utility package designed to improve SEO-friendliness and accessibility in Flutter web applications. It includes custom semantic widgets like: `SeoScaffold`, `SeoAppBar`, `SeoCenter`, `SeoContainer`, `SeoListView`, `SeoColumn`, `SeoRow`, `SeoText`, `SeoTextField`, `SeoButton`, `SeoImage`, `SeoLink` — all optimized for DOM manipulation and web enhancements"
-version: 0.0.6
+version: 0.0.7
 homepage: https://github.com/nahidhasan-dev/flutterdomui
 
 environment:
