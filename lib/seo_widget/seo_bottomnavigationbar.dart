@@ -84,7 +84,7 @@ class SeoBottomNavigationBar extends StatelessWidget
   void injectHtmlTo(WebHTMLElement parent) {
     if (!kIsWeb) return;
     final document = webWindow.document;
-    final footerContainer = document.createElement('footer') as WebHTMLElement;
+    final navContainer = document.createElement('nav') as WebHTMLElement;
 
     // Actions
     if (items.isNotEmpty) {
@@ -92,10 +92,10 @@ class SeoBottomNavigationBar extends StatelessWidget
       for (final item in items) {
         _appendWidgetToContainer(item, actionsContainer);
       }
-      footerContainer.appendChild(actionsContainer);
+      navContainer.appendChild(actionsContainer);
     }
 
-    parent.appendChild(footerContainer);
+    parent.appendChild(navContainer);
   }
 
   void _appendWidgetToContainer(
