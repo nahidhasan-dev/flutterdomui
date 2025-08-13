@@ -1,13 +1,25 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter_dom_ui/dom_injector.dart';
 
+/// Represents different HTML `<head>` tags that can be injected.
 enum HeadTag { title, link, meta, script }
 
+/// Extension on [HeadTag] to get its string name for DOM usage.
 extension TextTagExtension on HeadTag {
   String get name => toString().split('.').last;
 }
 
+/// Utility class for injecting SEO-related `<head>` elements into the DOM.
+///
+/// Only works in Flutter Web. On non-web platforms, all methods are no-ops.
 class SeoHeadTag {
+  /// Injects a `<head>` element specified by [tag] into the document.
+  ///
+  /// Optionally, provide [attributes] to set element attributes,
+  /// and [innerText] for text content (ignored for `<meta>` tags).
+  ///
+  /// Existing `<title>`, canonical `<link>`, or Open Graph `<meta>` tags
+  /// with the same identifiers will be removed before injection.
   static void inject({
     required HeadTag tag,
     Map<String, String>? attributes,
@@ -17,7 +29,7 @@ class SeoHeadTag {
 
     final document = webWindow.document;
 
-    // If setting <title>, remove existing ones
+    // Remove existing <title>
     if (tag.name.toLowerCase() == 'title') {
       final existingTitles = document.head?.getElementsByTagName('title');
       if (existingTitles != null) {
@@ -44,7 +56,7 @@ class SeoHeadTag {
       }
     }
 
-    // For <meta property="og:*"> tags, remove existing ones with same property
+    // For <meta property="og:*"> Open Graph tags, remove existing ones with same property
     if (tag == HeadTag.meta &&
         attributes != null &&
         attributes.containsKey('property')) {
@@ -78,12 +90,15 @@ class SeoHeadTag {
     document.head?.appendChild(element);
   }
 
-  /// Inject canonical URL <link rel="canonical" href="..." />
+  /// Inject canonical URL <link rel="canonical" href="..." /> into `<head>`.
   static void injectCanonicalUrl(String url) {
     inject(tag: HeadTag.link, attributes: {'rel': 'canonical', 'href': url});
   }
 
-  /// Inject Open Graph meta tags (og:title, og:image, etc)
+  /// Injects Open Graph `<meta>` tags for social media sharing.
+  ///
+  /// Supported tags include `og:title`, `og:image`, `og:url`, `og:type`,
+  /// and `og:description`. Only non-null parameters are injected.
   static void injectOpenGraph({
     String? title,
     String? image,

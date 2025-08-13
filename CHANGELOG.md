@@ -32,3 +32,7 @@
 ## 0.0.8
 
 -ADD: Added new HTML DOM **SeoFooter** which will show on Flutter as Container & on html as `<footer></footer>`
+
+## 0.0.9
+
+- DOCUMENTATION: Added thorough documentation for all libraries, classes, functions, and API elements to improve code readability and maintainability.
