@@ -40,3 +40,13 @@
 ## 0.1.0
 
 - ADD: Added new HTML DOM **SeoGridView** which renders a Flutter GridView while injecting a semantic `<div>` with CSS Grid for SEO in Flutter Web.
+
+## 0.1.1
+
+### Added / Updated
+
+- Made **SeoContainer** clickable for better interactivity.
+- Made **SeoImage** clickable to support user actions.
+- Made **SeoText** clickable to enable tap responses.
+- Added **SeoSizedBox** for spacing and layout control.
+- Added **SeoConstrainedBox** to manage widget constraints effectively.

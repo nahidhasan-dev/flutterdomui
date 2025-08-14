@@ -44,9 +44,6 @@ class SeoScaffold extends StatelessWidget {
   /// Optional bottom navigation bar that supports HTML injection.
   final SeoInjectableLayout? bottomNavigationBar;
 
-  /// Optional footer that supports HTML injection.
-  final SeoInjectableLayout? footer;
-
   /// Scaffold background color.
   final Color? backgroundColor;
 
@@ -96,7 +93,6 @@ class SeoScaffold extends StatelessWidget {
     this.appBar,
     required this.body,
     this.bottomNavigationBar,
-    this.footer,
     this.backgroundColor,
     this.floatingActionButton,
     this.floatingActionButtonLocation,
@@ -201,11 +197,6 @@ class SeoScaffold extends StatelessWidget {
       // Inject <header>
       if (appBar != null) {
         appBar!.injectHtmlTo(container);
-      }
-
-      // Inject <footer>
-      if (footer != null) {
-        footer!.injectHtmlTo(container);
       }
 
       // Inject <main>

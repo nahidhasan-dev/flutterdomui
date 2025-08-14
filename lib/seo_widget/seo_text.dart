@@ -68,6 +68,9 @@ class SeoText extends StatelessWidget implements SeoInjectable {
   /// Color used when selecting text.
   final Color? selectionColor;
 
+  /// Optional callback triggered when the link is tapped in Flutter.
+  final void Function()? onTap;
+
   /// Creates a [SeoText] widget.
   const SeoText(
     this.text, {
@@ -87,25 +90,32 @@ class SeoText extends StatelessWidget implements SeoInjectable {
     this.textWidthBasis,
     this.textHeightBehavior,
     this.selectionColor,
+    this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      text,
-      style: style,
-      strutStyle: strutStyle,
-      textAlign: textAlign,
-      textDirection: textDirection,
-      locale: locale,
-      softWrap: softWrap,
-      overflow: overflow,
-      textScaler: textScaler,
-      maxLines: maxLines,
-      semanticsLabel: semanticsLabel,
-      textWidthBasis: textWidthBasis,
-      textHeightBehavior: textHeightBehavior,
-      selectionColor: selectionColor,
+    return MouseRegion(
+      cursor: SystemMouseCursors.click,
+      child: GestureDetector(
+        onTap: onTap,
+        child: Text(
+          text,
+          style: style,
+          strutStyle: strutStyle,
+          textAlign: textAlign,
+          textDirection: textDirection,
+          locale: locale,
+          softWrap: softWrap,
+          overflow: overflow,
+          textScaler: textScaler,
+          maxLines: maxLines,
+          semanticsLabel: semanticsLabel,
+          textWidthBasis: textWidthBasis,
+          textHeightBehavior: textHeightBehavior,
+          selectionColor: selectionColor,
+        ),
+      ),
     );
   }
 

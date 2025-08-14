@@ -12,7 +12,7 @@
 ## ✨ Features
 
 - 📦 SEO-friendly widgets (`SeoText`, `SeoImage`, `SeoButton`, etc.)
-- ⚡ Custom wrappers for layout widgets: `ListView`,`SingleChildScrollView`, `Column`, `Row`, `Container`, `Center`, `Footer`
+- ⚡ Custom wrappers for layout widgets: `ListView`,`SingleChildScrollView`, `Column`, `Row`, `SizedBox`, `ConstrainedBox` `Container`, `Center`, `Footer`
 - 🔗 Semantic links using `<a>` tag behavior via `SeoLink`
 - 🔠 DOM-based text rendering with `SeoText` for better crawlability
 - 🧱 Scaffold, BottomNavigationBar and AppBar variants: `SeoScaffold`, `SeoAppBar`, `SeoBottomNavigationBar`
@@ -28,7 +28,7 @@ Add the package to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  flutter_dom_ui: ^<latest_version>
+  flutter_dom_ui: ^0.1.1
 ```
 
 Then run:

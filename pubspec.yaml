@@ -1,6 +1,6 @@
 name: flutter_dom_ui
 description: "flutter_dom_ui is a new universal Flutter package for SEO-friendly and accessible in Flutter web app."
-version: 0.1.0
+version: 0.1.1
 homepage: https://github.com/nahidhasan-dev/flutterdomui
 
 environment:

@@ -56,16 +56,19 @@ class SeoLink extends StatelessWidget implements SeoInjectable {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Text(
-        text,
-        style:
-            style ??
-            const TextStyle(
-              color: Color(0xFF0000EE),
-              decoration: TextDecoration.underline,
-            ),
+    return MouseRegion(
+      cursor: SystemMouseCursors.click,
+      child: GestureDetector(
+        onTap: onTap,
+        child: Text(
+          text,
+          style:
+              style ??
+              const TextStyle(
+                color: Color(0xFF0000EE),
+                decoration: TextDecoration.underline,
+              ),
+        ),
       ),
     );
   }

@@ -57,6 +57,9 @@ class SeoImage extends StatelessWidget implements SeoInjectable {
   /// If not provided, a random ID will be generated.
   final String? id;
 
+  /// Optional callback triggered when the link is tapped in Flutter.
+  final void Function()? onTap;
+
   /// Creates a [SeoImage] widget.
   const SeoImage({
     required this.src,
@@ -69,20 +72,27 @@ class SeoImage extends StatelessWidget implements SeoInjectable {
     this.semanticLabel,
     this.excludeFromSemantics = false,
     this.id,
+    this.onTap,
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Image.network(
-      src,
-      width: width,
-      height: height,
-      fit: fit,
-      alignment: alignment,
-      repeat: repeat,
-      semanticLabel: semanticLabel,
-      excludeFromSemantics: excludeFromSemantics,
+    return MouseRegion(
+      cursor: SystemMouseCursors.click,
+      child: GestureDetector(
+        onTap: onTap,
+        child: Image.network(
+          src,
+          width: width,
+          height: height,
+          fit: fit,
+          alignment: alignment,
+          repeat: repeat,
+          semanticLabel: semanticLabel,
+          excludeFromSemantics: excludeFromSemantics,
+        ),
+      ),
     );
   }
 

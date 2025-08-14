@@ -27,17 +27,6 @@ class MainApp extends StatelessWidget {
             style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
           ),
         ),
-        footer: SeoFooter(
-          width: MediaQuery.of(context).size.width,
-          height: 80,
-          color: Colors.black,
-          child: SeoCenter(
-            child: SeoText(
-              '© 2025 Crealick. All rights reserved.',
-              style: TextStyle(color: Colors.white),
-            ),
-          ),
-        ),
         body: SeoCenter(
           child: SeoContainer(
             width: 600,

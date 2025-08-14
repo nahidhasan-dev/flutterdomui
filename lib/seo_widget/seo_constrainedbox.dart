@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dom_ui/helper/seo_injectable.dart';
 import 'package:flutter_dom_ui/dom_injector.dart';
 
-/// A container widget that not only displays content in Flutter,
+/// A constrainedbox widget that not only displays content in Flutter,
 /// but also injects an equivalent HTML `<div>` structure for SEO purposes
 /// when running on web.
 ///
@@ -12,54 +12,22 @@ import 'package:flutter_dom_ui/dom_injector.dart';
 /// semantic HTML to search engines.
 ///
 /// Implements [SeoInjectableLayout] so it can be part of an SEO DOM hierarchy.
-class SeoContainer extends StatelessWidget implements SeoInjectableLayout {
-  /// The child widget to display inside the container.
+class SeoConstrainedBox extends StatelessWidget implements SeoInjectableLayout {
+  /// The child widget to display inside the constrainedbox.
   final Widget? child;
 
-  /// How to align the child within the container.
-  final AlignmentGeometry? alignment;
-
-  /// Inner padding between the container’s edge and its child.
-  final EdgeInsetsGeometry? padding;
-
-  /// The background color of the container.
-  final Color? color;
-
-  /// A decoration to paint behind the child.
-  final Decoration? decoration;
-
-  /// A decoration to paint in front of the child.
-  final Decoration? foregroundDecoration;
-
-  /// The width of the container.
-  final double? width;
-
-  /// The height of the container.
-  final double? height;
-
-  /// Additional constraints to apply to the container.
-  final BoxConstraints? constraints;
-
-  /// Outer margin around the container.
-  final EdgeInsetsGeometry? margin;
+  /// Additional constraints to apply to the constrainedbox.
+  final BoxConstraints constraints;
 
   /// Optional callback triggered when the link is tapped in Flutter.
   final void Function()? onTap;
 
   /// Creates a [SeoContainer] that works like a normal [Container]
   /// but also outputs an HTML `<div>` for SEO.
-  const SeoContainer({
+  const SeoConstrainedBox({
     super.key,
     this.child,
-    this.alignment,
-    this.padding,
-    this.color,
-    this.decoration,
-    this.foregroundDecoration,
-    this.width,
-    this.height,
-    this.constraints,
-    this.margin,
+    required this.constraints,
     this.onTap,
   });
 
@@ -69,23 +37,12 @@ class SeoContainer extends StatelessWidget implements SeoInjectableLayout {
       cursor: SystemMouseCursors.click,
       child: GestureDetector(
         onTap: onTap,
-        child: Container(
-          alignment: alignment,
-          padding: padding,
-          color: color,
-          decoration: decoration,
-          foregroundDecoration: foregroundDecoration,
-          width: width,
-          height: height,
-          constraints: constraints,
-          margin: margin,
-          child: child,
-        ),
+        child: ConstrainedBox(constraints: constraints, child: child),
       ),
     );
   }
 
-  /// Injects the HTML representation of this container into the [parent] element.
+  /// Injects the HTML representation of this constrainedbox into the [parent] element.
   ///
   /// Only executes if running on Web (`kIsWeb == true`).
   /// Creates a `<div>` element, assigns it a unique ID, and
@@ -98,8 +55,6 @@ class SeoContainer extends StatelessWidget implements SeoInjectableLayout {
     // Create a div element for HTML structure
     final divContainer = document.createElement('div') as WebHTMLDivElement;
     divContainer.id = _generateRandomId();
-    divContainer.style.width = width.toString();
-    divContainer.style.height = height.toString();
 
     // Recursively inject child if present
     if (child != null) {
@@ -126,6 +81,6 @@ class SeoContainer extends StatelessWidget implements SeoInjectableLayout {
   String _generateRandomId() {
     const chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
     final rand = Random();
-    return 'container_${List.generate(4, (_) => chars[rand.nextInt(chars.length)]).join()}';
+    return 'constrained_${List.generate(4, (_) => chars[rand.nextInt(chars.length)]).join()}';
   }
 }
