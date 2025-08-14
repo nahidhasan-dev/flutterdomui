@@ -6,6 +6,7 @@ export 'seo_widget/seo_center.dart';
 export 'seo_widget/seo_container.dart';
 export 'seo_widget/seo_button.dart';
 export 'seo_widget/seo_listview.dart';
+export 'seo_widget/seo_gridview.dart';
 export 'seo_widget/seo_column.dart';
 export 'seo_widget/seo_row.dart';
 export 'seo_widget/seo_image.dart';

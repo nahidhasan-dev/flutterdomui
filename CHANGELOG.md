@@ -36,3 +36,7 @@
 ## 0.0.9
 
 - DOCUMENTATION: Added thorough documentation for all libraries, classes, functions, and API elements to improve code readability and maintainability.
+
+## 0.1.0
+
+- ADD: Added new HTML DOM **SeoGridView** which renders a Flutter GridView while injecting a semantic `<div>` with CSS Grid for SEO in Flutter Web.
