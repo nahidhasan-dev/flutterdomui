@@ -43,10 +43,11 @@
 
 ## 0.1.1
 
-### Added / Updated
+- Added **SeoSizedBox** for spacing and layout control.
+- Added **SeoConstrainedBox** to manage widget constraints effectively.
+
+## 0.1.2
 
 - Made **SeoContainer** clickable for better interactivity.
 - Made **SeoImage** clickable to support user actions.
 - Made **SeoText** clickable to enable tap responses.
-- Added **SeoSizedBox** for spacing and layout control.
-- Added **SeoConstrainedBox** to manage widget constraints effectively.

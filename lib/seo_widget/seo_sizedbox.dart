@@ -38,7 +38,8 @@ class SeoSizedBox extends StatelessWidget implements SeoInjectableLayout {
   @override
   Widget build(BuildContext context) {
     return MouseRegion(
-      cursor: SystemMouseCursors.click,
+      cursor:
+          onTap != null ? SystemMouseCursors.click : SystemMouseCursors.basic,
       child: GestureDetector(
         onTap: onTap,
         child: SizedBox(width: width, height: height, child: child),

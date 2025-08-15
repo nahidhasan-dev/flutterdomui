@@ -34,7 +34,8 @@ class SeoConstrainedBox extends StatelessWidget implements SeoInjectableLayout {
   @override
   Widget build(BuildContext context) {
     return MouseRegion(
-      cursor: SystemMouseCursors.click,
+      cursor:
+          onTap != null ? SystemMouseCursors.click : SystemMouseCursors.basic,
       child: GestureDetector(
         onTap: onTap,
         child: ConstrainedBox(constraints: constraints, child: child),
