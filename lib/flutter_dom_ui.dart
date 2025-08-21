@@ -18,3 +18,7 @@ export 'seo_widget/seo_bottomnavigationbar.dart';
 export 'seo_widget/seo_footer.dart';
 export 'seo_widget/seo_sizedbox.dart';
 export 'seo_widget/seo_constrainedbox.dart';
+export 'seo_widget/seo_card.dart';
+export 'seo_widget/seo_choicechip.dart';
+export 'seo_widget/seo_padding.dart';
+export 'seo_widget/seo_wrap.dart';

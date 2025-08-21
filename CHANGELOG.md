@@ -51,3 +51,10 @@
 - Made **SeoContainer** clickable for better interactivity.
 - Made **SeoImage** clickable to support user actions.
 - Made **SeoText** clickable to enable tap responses.
+
+## 0.1.3
+
+- Added **SeoPadding**: A padding widget that injects semantic HTML <div> with padding for SEO on Web.
+- Added **SeoWrap**: A wrap widget that uses CSS flex-wrap in injected HTML for better SEO semantics.
+- Added **SeoCard**: (Assuming a card widget similar to others, injects HTML structure for SEO).
+- Added **SeoChoicechip**: ChoiceChip widget that injects a semantic HTML <button> with ARIA attributes for accessibility and SEO.

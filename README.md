@@ -5,14 +5,14 @@
 
 **flutter_dom_ui** is a Flutter UI utility package designed to improve **SEO-friendliness** and **accessibility** in Flutter web applications. It includes custom semantic widgets like:
 
-`SeoScaffold`, `SeoAppBar`, `SeoBottomNavigationBar`, `SeoCenter`, `SeoContainer`, `SeoFooter`, `SeoListView`,`SeoSingleChildScrollView`, `SeoColumn`, `SeoRow`, `SeoText`, `SeoTextField`, `SeoButton`, `SeoImage`, `SeoLink` — all optimized for **DOM manipulation and web enhancements**.
+`SeoScaffold`, `SeoAppBar`, `SeoBottomNavigationBar`, `SeoPadding`, `SeoCenter`, `SeoContainer`, `SeoWrap`, `SeoCard`, `SeoChoiceChip` , `SeoFooter`, `SeoListView`,`SeoSingleChildScrollView`, `SeoColumn`, `SeoRow`, `SeoText`, `SeoTextField`, `SeoButton`, `SeoImage`, `SeoLink` — all optimized for **DOM manipulation and web enhancements**.
 
 ---
 
 ## ✨ Features
 
-- 📦 SEO-friendly widgets (`SeoText`, `SeoImage`, `SeoButton`, etc.)
-- ⚡ Custom wrappers for layout widgets: `ListView`,`SingleChildScrollView`, `Column`, `Row`, `SizedBox`, `ConstrainedBox` `Container`, `Center`, `Footer`
+- 📦 SEO-friendly widgets (`SeoText`, `SeoImage`, `SeoButton`, `SeoLink` etc.)
+- ⚡ Custom wrappers for layout widgets: `ListView`,`SingleChildScrollView`, `Column`, `Row`, `SizedBox`, `ConstrainedBox` `Container`, `Center`, `Footer`, `Wrap`, `Card`, `ChoiceChip`
 - 🔗 Semantic links using `<a>` tag behavior via `SeoLink`
 - 🔠 DOM-based text rendering with `SeoText` for better crawlability
 - 🧱 Scaffold, BottomNavigationBar and AppBar variants: `SeoScaffold`, `SeoAppBar`, `SeoBottomNavigationBar`
@@ -28,7 +28,7 @@ Add the package to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  flutter_dom_ui: ^0.1.1
+  flutter_dom_ui: ^0.1.3
 ```
 
 Then run:
